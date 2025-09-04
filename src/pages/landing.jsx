@@ -36,7 +36,7 @@ function LandingSnap() {
               href="https://wa.me/+905526327279"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block rounded-lg bg-[#E694AD] px-5 py-3 text-white font-semibold shadow hover:opacity-90 active:scale-[0.99] transition"
+              className="inline-block rounded-lg bg-[#25D366] px-5 py-3 text-white font-semibold shadow hover:opacity-90 active:scale-[0.99] transition"
             >
               احجز عبر واتساب الآن
             </Link>
@@ -50,7 +50,7 @@ function LandingSnap() {
           </div>
 
           {/* Social proof / micro bullets */}
-          <ul className="mt-5 text-sm text-gray-600 space-y-1">
+          <ul className="my-5 text-sm text-gray-600 space-y-1">
             <li>✔️ جلسات فردية وجماعية (حتى 5 طلاب)</li>
             <li>✔️ تعليم ممتع بأساليب تفاعلية وألعاب تعليمية</li>
             <li>✔️ أمان ومرونة كاملة من المنزل</li>
@@ -58,7 +58,7 @@ function LandingSnap() {
         </div>
       </section>
 
-      <div className="sticky bottom-0 inset-x-0 bg-white/90 backdrop-blur border-t">
+      {/* <div className="sticky bottom-0 inset-x-0 bg-white/90 backdrop-blur border-t">
         <div className="max-w-md mx-auto px-6 py-3">
           <Link
             href="https://wa.me/+905526327279"
@@ -69,7 +69,7 @@ function LandingSnap() {
             تواصل معنا الآن عبر واتساب
           </Link>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
