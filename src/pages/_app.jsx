@@ -6,7 +6,9 @@ import Layout from "../components/Layout";
 import "../styles/globals.css";
 
 const MyApp = ({ Component, pageProps, router }) => {
-  const { locale } = useRouter();
+  if (Component.noLayout) {
+    return <Component {...pageProps} />;
+  }
 
   return (
     <Layout>
