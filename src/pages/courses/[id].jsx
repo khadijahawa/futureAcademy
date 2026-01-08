@@ -1,16 +1,24 @@
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 import { courseData } from "../../utils/courseData";
 import Image from "next/image";
 import Link from "next/link";
+import { snapTrack } from "../../utils/snapchatPixel";
 
 export default function CourseDetail() {
   const router = useRouter();
   const { id } = router.query;
 
-  // Fetch the course data based on the `id` from the URL
+  useEffect(() => {
+    if (!id) return;
+    snapTrack("VIEW_CONTENT", {
+      item_category: "course",
+      item_ids: [String(id)]
+    });
+  }, [id]);
+
   const course = courseData.find((course) => course.id === id);
 
-  // If course data is not found, show a loading or error message
   if (!course) {
     return (
       <div className="min-h-screen flex items-center justify-center text-gray-700">

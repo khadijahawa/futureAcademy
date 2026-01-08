@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../utils/Logo/Logo_Final_03.png";
+import { snapTrack } from "../utils/snapchatPixel";
 
 function LandingSnap() {
   return (
@@ -37,12 +38,19 @@ function LandingSnap() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block rounded-lg bg-[#25D366] px-5 py-3 text-white font-semibold shadow hover:opacity-90 active:scale-[0.99] transition"
+              onClick={() => snapTrack("LEAD", { item_category: "whatsapp" })}
             >
               احجز عبر واتساب الآن
             </Link>
 
             <Link
               href="/courses"
+              onClick={() =>
+                snapTrack("VIEW_CONTENT", {
+                  item_category: "courses",
+                  item_ids: ["courses_list"]
+                })
+              }
               className="inline-block rounded-lg bg-[#F0CC67] px-5 py-3 text-gray-900 font-semibold shadow hover:opacity-95 active:scale-[0.99] transition"
             >
               استكشف دوراتنا
